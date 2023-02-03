@@ -33,11 +33,11 @@ Proje yazılımı için SimHub adlı uygulamaya ihtiyacımız var. [Bu bağlant�
 
 1. Öncelikle devreyi kurun. Ben bu şekilde kurdum. Siz güncelleyebilirsiniz fakat bunları kodda güncellemeyi unutmayın. (LCD Ekran pinlerini değiştiremezsiniz. Sadece arduino modeli değişirse pinler değişir.) Butonların neden bu şekilde olduğuna dair bir sorunuz olacaktır. Butonları MATRIX dediğimiz bağlantı türü ile bağlayarak pin kullanımını azalttık. İnternetten araştırarak ya da nasıl bağlayacağınızı bana sorarak öğrenebilirsiniz.
 2. Kurduğumuz devreye yazılım atalım. Öncelikle SimHub programını açarak Arduino sekmesine, oradan da My Hardware sekmesine girerek "Open Arduino Setup Tool" butonuna tıklayarak yazılım atmaya hazırlanıyoruz. Açılan pencereden aşağıdaki değişiklikleri yapın: 
-- GAMEPAD : ON 
-- MAX 7221 : ON (Pin verileri fotoğraftaki gibi girilmeli)
-- WS2812B : 16 ADET LED, 4. PIN, GRB ENCODING
-- I2C LCD : ON (Pin verileri fotoğraftaki gibi girilmeli, ayrıca I2C adresi de I2C kartına uygun olarak yazılmalıdır. Öğrenmek için Google'a "I2C adress test on arduino" yazabilirsiniz. I2C Kütüphanesi PCF8574T olarak seçilmelidir.)
-- BUTTON MATRİX : ON (Pin verileri fotoğraftaki gibi girilmeli, 2 COLUMNS - 5 ROWS)
+  - GAMEPAD : ON 
+  - MAX 7221 : ON (Pin verileri fotoğraftaki gibi girilmeli)
+  - WS2812B : 16 ADET LED, 4. PIN, GRB ENCODING
+  - I2C LCD : ON (Pin verileri fotoğraftaki gibi girilmeli, ayrıca I2C adresi de I2C kartına uygun olarak yazılmalıdır. Öğrenmek için Google'a "I2C adress test on arduino" yazabilirsiniz. I2C Kütüphanesi PCF8574T olarak seçilmelidir.)
+  - BUTTON MATRİX : ON (Pin verileri fotoğraftaki gibi girilmeli, 2 COLUMNS - 5 ROWS)
 Bu değişiklikleri yaptıktan sonra sağ kısımdan kullandığınız Arduino kartını ve port numarasını doğru olarak seçmeli ve "I understand that uploading..." yazan kutucuğu işaretleyerek karta yazılım yüklemesi yapmalısınız. Bu sayede karta yazılımını yüklemiş oluyorsunuz.
 3. Kurduğunuz devreyi, baskısını aldığınız 3D model ya da fotoblokla beraber pleksi levhaya montajlamanız gerekiyor. Bu noktada el işçiliğiniz önemli bir görev teşkil ediyor. Parçaları dikkatli bağlamanızda fayda var.
 4. Projenize güç vererek test edin. Eğer herhangi bir kısa devre problemi yoksa (NOT : PROJE OYUN SIRASINDA ÇOK GÜÇ ÇEKEBİLİR, AYRI BİR GÜÇ KAYNAĞI BAĞLAMAYIN KARTI YAKARSINIZ) projeniz neredeyse hazır durumdadır.
