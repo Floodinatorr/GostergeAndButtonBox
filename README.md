@@ -33,20 +33,36 @@ Proje yazılımı için SimHub adlı uygulamaya ihtiyacımız var. [Bu bağlant�
 
 1. Öncelikle devreyi kurun. Ben bu şekilde kurdum. Siz güncelleyebilirsiniz fakat bunları kodda güncellemeyi unutmayın. (LCD Ekran pinlerini değiştiremezsiniz. Sadece arduino modeli değişirse pinler değişir.) Butonların neden bu şekilde olduğuna dair bir sorunuz olacaktır. Butonları MATRIX dediğimiz bağlantı türü ile bağlayarak pin kullanımını azalttık. İnternetten araştırarak ya da nasıl bağlayacağınızı bana sorarak öğrenebilirsiniz.
 2. Kurduğumuz devreye yazılım atalım. Öncelikle SimHub programını açarak Arduino sekmesine, oradan da My Hardware sekmesine girerek "Open Arduino Setup Tool" butonuna tıklayarak yazılım atmaya hazırlanıyoruz. Açılan pencereden aşağıdaki değişiklikleri yapın: 
-  - GAMEPAD : ON 
-  - MAX 7221 : ON (Pin verileri fotoğraftaki gibi girilmeli)
-  - WS2812B : 16 ADET LED, 4. PIN, GRB ENCODING
-  - I2C LCD : ON (Pin verileri fotoğraftaki gibi girilmeli, ayrıca I2C adresi de I2C kartına uygun olarak yazılmalıdır. Öğrenmek için Google'a "I2C adress test on arduino" yazabilirsiniz. I2C Kütüphanesi PCF8574T olarak seçilmelidir.)
-  - BUTTON MATRİX : ON (Pin verileri fotoğraftaki gibi girilmeli, 2 COLUMNS - 5 ROWS)
+  - GAMEPAD : **ON** 
+  - MAX 7221 : **ON** (Pin verileri fotoğraftaki gibi girilmeli)
+  - WS2812B : **16 ADET LED, 4. PIN, GRB ENCODING**
+  - I2C LCD : **ON** (Pin verileri fotoğraftaki gibi girilmeli, ayrıca I2C adresi de I2C kartına uygun olarak yazılmalıdır. Öğrenmek için Google'a "I2C adress test on arduino" yazabilirsiniz. I2C Kütüphanesi PCF8574T olarak seçilmelidir.)
+  - BUTTON MATRİX : **ON** (Pin verileri fotoğraftaki gibi girilmeli, 2 COLUMNS - 5 ROWS)
 Bu değişiklikleri yaptıktan sonra sağ kısımdan kullandığınız Arduino kartını ve port numarasını doğru olarak seçmeli ve "I understand that uploading..." yazan kutucuğu işaretleyerek karta yazılım yüklemesi yapmalısınız. Bu sayede karta yazılımını yüklemiş oluyorsunuz.
 3. Kurduğunuz devreyi, baskısını aldığınız 3D model ya da fotoblokla beraber pleksi levhaya montajlamanız gerekiyor. Bu noktada el işçiliğiniz önemli bir görev teşkil ediyor. Parçaları dikkatli bağlamanızda fayda var.
-4. Projenize güç vererek test edin. Eğer herhangi bir kısa devre problemi yoksa (NOT : PROJE OYUN SIRASINDA ÇOK GÜÇ ÇEKEBİLİR, AYRI BİR GÜÇ KAYNAĞI BAĞLAMAYIN KARTI YAKARSINIZ) projeniz neredeyse hazır durumdadır.
+4. Projenize güç vererek test edin. Eğer herhangi bir kısa devre problemi yoksa projeniz neredeyse hazır durumdadır.
+> **PROJE OYUN SIRASINDA ÇOK GÜÇ ÇEKEBİLİR, AYRI BİR GÜÇ KAYNAĞI BAĞLAMAYIN KARTI YAKARSINIZ!**
 5. Projenizdeki parçaların neler yapabileceği ya da göstereceği bilgisini güncelleyebilirsiniz!
-- ##### BUTONLAR : SimHub uygulamasından "Control and Events" sekmesine gidin. Oradan da "Keyboard emulation" sekmesine gidin. "Add mapping" butonuna tıklayarak her buton için ayrı bir harf, karakter ya da numara atayabilirsiniz. Input kısmındaki "Click to configure" metnine tıkladığınızda açılan pencerede kullanmak istediğiniz butona basarak Buton bilgisini verebilir, hangi durumlarda çalışacağını liste kutucuğundan seçebilirsiniz. "Simulated Keys" kısmına da butona göre klavyede bastırmak istediğiniz tuş bilgisini verebilirsiniz.
-- ##### LCD / RGB LED / DOT MATRIX : SimHub uygulamasındaki "Arduino" sekmesindeki "Screens" ile LCD Ekran'a veri göndermeyi, "RGB LEDs" özelliği ile WS2812B Sticklere veri göndermeyi, "Display & Alerts" sekmesinden de Dot Matrix'e vites verisini gönderebilirsiniz.
+- ##### **BUTONLAR** : SimHub uygulamasından **"Control and Events"** sekmesine gidin. Oradan da **"Keyboard emulation"** sekmesine gidin. **"Add mapping"** butonuna tıklayarak her buton için ayrı bir harf, karakter ya da numara atayabilirsiniz. Input kısmındaki **"Click to configure"** metnine tıkladığınızda açılan pencerede kullanmak istediğiniz butona basarak Buton bilgisini verebilir, hangi durumlarda çalışacağını liste kutucuğundan seçebilirsiniz. **"Simulated Keys"** kısmına da butona göre klavyede bastırmak istediğiniz tuş bilgisini verebilirsiniz.
+- ##### **LCD / RGB LED / DOT MATRIX** : SimHub uygulamasındaki **"Arduino"** sekmesindeki **"Screens"** ile LCD Ekran'a veri göndermeyi, **"RGB LEDs"** özelliği ile WS2812B Sticklere veri göndermeyi, **"Display & Alerts"** sekmesinden de Dot Matrix'e vites verisini gönderebilirsiniz.
 
 Bunlarla ilgili detaylar aşağıdadır.
 
+# Veri Gönderme / Alma
+
+1. **LCD Ekran için Veri gönderme DETAYLI** : **"Arduino"** sekmesinde **"Screens"** bölümündeki **"New screen"** butonuna tıklıyoruz. Önümüze bir pencere açılıyor. Bu pencerenin üst kısmındaki liste kutusu ile bu ekran verisinin hangi oyunlar için çalışacağını seçebilirsiniz. Sol taraftaki **"Preview"** kısmında LCD ekrana gidecek verileri düzenleyebilirsiniz. **"Preview as..."** kısmını LCD yapmayı unutmayın. Aksi takdirde düzgün çalışmaz. **"Elements"** sekmesi altında ekleyebileceğiniz şeyler :
+
+- **Text** : Rastgele, basit metinleri bu özellikle yazabilirsiniz.
+- **SimHub Property** : SimHub'ın oyundan çektiği herhangi veriyi alarak LCD ekrana yazdırabilirsiniz. Property format kısmından LCD ekrana yazdırabileceğiniz verinin biçimini düzenleyebilirsiniz.
+- **Computed Text** : En kompleks kısım aslında burası. Buradan çektiğiniz verileri NCALC kodları ile sanki kod yazıyormuşcasına gönderebilmenizi sağlar. Ne demek mi istiyorum? Mesela yakıt veriniz 50 litrenin altındaysa LCD Ekrana "YAKIT AL!" verisini gönderebilirsiniz.
+- **Line Return** : Bu özellik ile bir alt satıra geçebilirsiniz.
+
+2. **WS2812B için veri gönderme DETAYLI** : 
+**"Arduino"** sekmesinde **"RGB leds"** adı altında bulabileceğiniz bu özellikler ile RGB ledlerin parlaklığını değiştirebilir; hangi veriyi ne zaman, hangi lede, hangi renkle gönderecek gibi özellikleri değiştirebilirsiniz.
+3. **DOT MATRIX için veri gönderme DETAYLI** : 
+**"Arduino"** sekmesinde **"Display & Alerts"** kısmından bu özelliklere erişebilirsiniz. Dot Matrix'in yönünü, parlaklığını ya da yazı fontunu değiştirebilirsiniz.
+
+Proje bu kadar. Sorularınız olursa iletişim adreslerim profilimdedir. İyi günler...
 
 
 
