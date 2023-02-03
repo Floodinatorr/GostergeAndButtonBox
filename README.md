@@ -43,7 +43,7 @@ Bu değişiklikleri yaptıktan sonra sağ kısımdan kullandığınız Arduino k
 4. Projenize güç vererek test edin. Eğer herhangi bir kısa devre problemi yoksa projeniz neredeyse hazır durumdadır.
 > **PROJE OYUN SIRASINDA ÇOK GÜÇ ÇEKEBİLİR, AYRI BİR GÜÇ KAYNAĞI BAĞLAMAYIN KARTI YAKARSINIZ!**
 5. Projenizdeki parçaların neler yapabileceği ya da göstereceği bilgisini güncelleyebilirsiniz!
-- ##### **BUTONLAR** : SimHub uygulamasından **"Control and Events"** sekmesine gidin. Oradan da **"Keyboard emulation"** sekmesine gidin. **"Add mapping"** butonuna tıklayarak her buton için ayrı bir harf, karakter ya da numara atayabilirsiniz. Input kısmındaki **"Click to configure"** metnine tıkladığınızda açılan pencerede kullanmak istediğiniz butona basarak Buton bilgisini verebilir, hangi durumlarda çalışacağını liste kutucuğundan seçebilirsiniz. **"Simulated Keys"** kısmına da butona göre klavyede bastırmak istediğiniz tuş bilgisini verebilirsiniz.
+- ##### **BUTONLAR** : SimHub uygulamasından **"Control and Events"** sekmesine gidin. Oradan da **"Keyboard emulation"** sekmesine gidin. Bu kısımdan ayarlamaları yapabilirsiniz.
 - ##### **LCD / RGB LED / DOT MATRIX** : SimHub uygulamasındaki **"Arduino"** sekmesindeki **"Screens"** ile LCD Ekran'a veri göndermeyi, **"RGB LEDs"** özelliği ile WS2812B Sticklere veri göndermeyi, **"Display & Alerts"** sekmesinden de Dot Matrix'e vites verisini gönderebilirsiniz.
 
 Bunlarla ilgili detaylar aşağıdadır.
@@ -61,6 +61,9 @@ Bunlarla ilgili detaylar aşağıdadır.
 **"Arduino"** sekmesinde **"RGB leds"** adı altında bulabileceğiniz bu özellikler ile RGB ledlerin parlaklığını değiştirebilir; hangi veriyi ne zaman, hangi lede, hangi renkle gönderecek gibi özellikleri değiştirebilirsiniz.
 3. **DOT MATRIX için veri gönderme DETAYLI** : 
 **"Arduino"** sekmesinde **"Display & Alerts"** kısmından bu özelliklere erişebilirsiniz. Dot Matrix'in yönünü, parlaklığını ya da yazı fontunu değiştirebilirsiniz.
+
+4. **Butonlardan veri alma DETAYLI** : 
+**"Control and Events"** sekmesinde **"Keyboard emulation"** bölümünü kullanarak veri alma işlemi yapıp klavyede herhangi bir tuşa bastırabiliriz. **"Add mapping"** butonuna tıklayarak her buton için ayrı bir harf, karakter ya da numara atayabilirsiniz. Input kısmındaki **"Click to configure"** metnine tıkladığınızda açılan pencerede kullanmak istediğiniz butona basarak Buton bilgisini verebilir, hangi durumlarda çalışacağını liste kutucuğundan seçebilirsiniz. **"Simulated Keys"** kısmına da butona göre klavyede bastırmak istediğiniz tuş bilgisini verebilirsiniz.
 
 Proje bu kadar. Sorularınız olursa iletişim adreslerim profilimdedir. İyi günler...
 
