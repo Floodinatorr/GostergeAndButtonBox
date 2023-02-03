@@ -30,7 +30,7 @@ Proje yazılımı için SimHub adlı uygulamaya ihtiyacımız var. [Bu bağlant�
 # Yapım Aşaması
 
 1. Öncelikle devreyi kurun. Ben bu şekilde kurdum. Siz güncelleyebilirsiniz fakat bunları kodda güncellemeyi unutmayın. (LCD Ekran pinlerini değiştiremezsiniz. Sadece arduino modeli değişirse pinler değişir.)
-![Devre Şeması](devre/devre.png "Devre Şeması")
+![Devre Şeması](devre/devre.PNG "Devre Şeması")
 
 
 
