@@ -11,7 +11,7 @@ Bu proje için kullanılan yazılım her oyunu desteklemez. Desteklenilen oyunla
 
 - Herhangi bir Arduino kartı (Eğer ButtonBox özelliğini istiyorsanız Arduino Leonardo ya da Pro Micro kullanmalısınız, diğer kartlar ButtonBox özelliğini tam olarak desteklemiyor.)
 - 10 adet DC184 buton (Bu butonları pleksi üzerindeki buton deliklerinin yarıçapını değiştirerek güncelleyebilir ya da ek yapabilirsiniz.)
-- 4*20 LCD Ekran (2*16 LCD ekran kullanılamaz.)
+- 4x20 LCD Ekran (2x16 LCD ekran kullanılamaz.)
 - LCD Ekran için I2C Modülü (ZORUNLU)
 - 2 adet WS2812B RGB LED Stick
 - 8*8 Dot Matrix (Kartı ile beraber)
@@ -32,13 +32,13 @@ Proje yazılımı için SimHub adlı uygulamaya ihtiyacımız var. [Bu bağlant�
 ![Devre Şeması](devre/devre.PNG "Devre Şeması")
 
 1. Öncelikle devreyi kurun. Ben bu şekilde kurdum. Siz güncelleyebilirsiniz fakat bunları kodda güncellemeyi unutmayın. (LCD Ekran pinlerini değiştiremezsiniz. Sadece arduino modeli değişirse pinler değişir.) Butonların neden bu şekilde olduğuna dair bir sorunuz olacaktır. Butonları MATRIX dediğimiz bağlantı türü ile bağlayarak pin kullanımını azalttık. İnternetten araştırarak ya da nasıl bağlayacağınızı bana sorarak öğrenebilirsiniz.
-2. Kurduğumuz devreye yazılım atalım. Öncelikle SimHub programını açarak Arduino sekmesine, oradan da My Hardware sekmesine girerek "Open Arduino Setup Tool" butonuna tıklayarak yazılım atmaya hazırlanıyoruz. Açılan pencereden aşağıdaki değişiklikleri yapın: 
+2. Kurduğumuz devreye yazılım atalım. Öncelikle SimHub programını açarak **"Arduino"** sekmesine, oradan da **"My Hardware"** sekmesine girerek **"Open Arduino Setup Tool"** butonuna tıklayarak yazılım atmaya hazırlanıyoruz. Açılan pencereden aşağıdaki değişiklikleri yapın: 
   - GAMEPAD : **ON** 
   - MAX 7221 : **ON** (Pin verileri fotoğraftaki gibi girilmeli)
   - WS2812B : **16 ADET LED, 4. PIN, GRB ENCODING**
   - I2C LCD : **ON** (Pin verileri fotoğraftaki gibi girilmeli, ayrıca I2C adresi de I2C kartına uygun olarak yazılmalıdır. Öğrenmek için Google'a "I2C adress test on arduino" yazabilirsiniz. I2C Kütüphanesi PCF8574T olarak seçilmelidir.)
   - BUTTON MATRİX : **ON** (Pin verileri fotoğraftaki gibi girilmeli, 2 COLUMNS - 5 ROWS)
-Bu değişiklikleri yaptıktan sonra sağ kısımdan kullandığınız Arduino kartını ve port numarasını doğru olarak seçmeli ve "I understand that uploading..." yazan kutucuğu işaretleyerek karta yazılım yüklemesi yapmalısınız. Bu sayede karta yazılımını yüklemiş oluyorsunuz.
+Bu değişiklikleri yaptıktan sonra sağ kısımdan kullandığınız Arduino kartını ve port numarasını doğru olarak seçmeli ve **"I understand that uploading..."** yazan kutucuğu işaretleyerek karta yazılım yüklemesi yapmalısınız. Bu sayede karta yazılımını yüklemiş oluyorsunuz.
 3. Kurduğunuz devreyi, baskısını aldığınız 3D model ya da fotoblokla beraber pleksi levhaya montajlamanız gerekiyor. Bu noktada el işçiliğiniz önemli bir görev teşkil ediyor. Parçaları dikkatli bağlamanızda fayda var.
 4. Projenize güç vererek test edin. Eğer herhangi bir kısa devre problemi yoksa projeniz neredeyse hazır durumdadır.
 > **PROJE OYUN SIRASINDA ÇOK GÜÇ ÇEKEBİLİR, AYRI BİR GÜÇ KAYNAĞI BAĞLAMAYIN KARTI YAKARSINIZ!**
