@@ -69,13 +69,7 @@ Proje bu kadar. Sorularınız olursa iletişim adreslerim profilimdedir. İyi g�
 
 Proje Fotoğrafları : 
 
-![Resim1](resimler/resim1.jpg "Resim1")
-![Resim2](resimler/resim2.jpg "Resim2")
-![Resim3](resimler/resim3.jpg "Resim3")
-![Resim4](resimler/resim4.jpg "Resim4")
-
-
-
+<img src="https://github.com/Floodinatorr/GostergeAndButtonBoxV1/blob/main/resimler/resim1.jpg" width="500">
 
 
 
