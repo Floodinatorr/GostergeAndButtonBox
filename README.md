@@ -70,7 +70,9 @@ Proje bu kadar. Sorularınız olursa iletişim adreslerim profilimdedir. İyi g�
 Proje Fotoğrafları : 
 
 <img src="https://github.com/Floodinatorr/GostergeAndButtonBoxV1/blob/main/resimler/resim1.jpg" width="500">
-
+<img src="https://github.com/Floodinatorr/GostergeAndButtonBoxV1/blob/main/resimler/resim2.jpg" width="500">
+<img src="https://github.com/Floodinatorr/GostergeAndButtonBoxV1/blob/main/resimler/resim3.jpg" width="500">
+<img src="https://github.com/Floodinatorr/GostergeAndButtonBoxV1/blob/main/resimler/resim4.jpg" width="500">
 
 
 
